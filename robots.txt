@@ -1,0 +1,32 @@
+-- Development
+User-agent: *
+Disallow: /
+
+-- Opencart (LIVE)
+User-agent: *
+
+Disallow: /*/search&search=
+Disallow: /*/search&search=*&sort=
+Disallow: /*/search&search=*&sort=*&order=
+Disallow: /*/search&search=*&sort=*&order=*&limit=
+
+Disallow: /*&search=
+Disallow: /*&sort=
+Disallow: /*?sort
+Disallow: /*&order=
+Disallow: /*?order
+Disallow: /*&limit=
+Disallow: /*?limit
+
+Disallow: /*login
+Disallow: /*register
+Disallow: /*forgotten
+Disallow: /*account*
+Disallow: /*logout
+Disallow: /*checkout*
+
+Disallow: /*affiliate*
+Disallow: /*download*
+Disallow: /*admin*
+
+Sitemap: https://www.example.com/sitemaps.xml
