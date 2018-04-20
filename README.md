@@ -1,1 +1,1 @@
-# robots.txt
+# Variations of a robots.txt file
