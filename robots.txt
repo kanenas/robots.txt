@@ -57,3 +57,67 @@ Allow: /catalog/view/javascript/
 Allow: /catalog/view/theme/*/
 
 Sitemap: https://www.example.com/sitemaps.xml
+
+-- WordPress & WooCommerce (LIVE)
+
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/cache/
+Disallow: /wp-json/wp/
+Disallow: /wp-json/oembed/
+Disallow: /?s=*
+Disallow: /*?replytocom
+Disallow: /comments/feed/
+Disallow: /feed/rss/
+Disallow: /xmlrpc.php
+Disallow: /trackback/
+
+# --- WOOCOMMERCE SPECIFIC BLOCKS ---
+# Block ALL add-to-cart and other functional parameters
+Disallow: /*?add-to-cart=*
+Disallow: /*add-to-cart=*&*
+Disallow: /*?wc-ajax=*
+Disallow: /*?coupon=*
+
+# Block session-specific and user-specific parameters
+Disallow: /*?utm_source=*
+Disallow: /*?utm_medium=*
+Disallow: /*?utm_campaign=*
+Disallow: /*?utm_term=*
+Disallow: /*?utm_content=*
+Disallow: /*?gclid=*
+Disallow: /*?fbclid=*
+Disallow: /*?_ga=*
+Disallow: /*?pk_source=*
+Disallow: /*?pk_medium=*
+Disallow: /*?pk_campaign=*
+Disallow: /*?pk_keyword=*
+
+# Block search and filter parameters
+Disallow: /*?filter_*
+Disallow: /*?min_price=*
+Disallow: /*?max_price=*
+Disallow: /*?rating_filter=*
+Disallow: /*?orderby=*
+Disallow: /*?product_view=*
+Disallow: /*?product_cat=*
+Disallow: /*?product_tag=*
+Disallow: /*?s=*&post_type=product
+
+# Allow essential directories and file types
+Allow: /wp-admin/admin-ajax.php
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/*/assets/
+Allow: /wp-content/plugins/*/assets/
+
+# Sitemap location
+Sitemap: https://www.example.com/sitemap_index.xml
+
+# Block SemrushBot
+User-agent: SemrushBot
+Disallow: /
+
